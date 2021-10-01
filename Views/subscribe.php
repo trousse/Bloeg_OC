@@ -6,3 +6,4 @@ $title = 'Mon blog'; ?>
     <h1> Subscribe </h1>
 
 <?php $content = ob_get_clean(); ?>
+<?php require_once("./Views/template.php");?>
