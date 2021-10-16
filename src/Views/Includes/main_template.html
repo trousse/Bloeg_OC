@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head %}
+{{ parent() }}
+    {% for link in links %}
+        <link rel="stylesheet" href={{ link }} />
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+    {{include('header.html')}}
+        <div id="page_container">
+            {% block page %}
+
+            {% endblock %}
+        </div>
+    {{include('footer.html')}}
+{% endblock %}
+
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

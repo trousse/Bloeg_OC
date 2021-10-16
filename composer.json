@@ -1,0 +1,17 @@
+{
+    "name": "thomasrousse/blog_oc",
+    "authors": [
+        {
+            "name": "trousse",
+            "email": "ths.rousse@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APP\\Blog\\": "src/"
+        }
+    }
+}
