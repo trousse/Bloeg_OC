@@ -1,4 +1,4 @@
-{% extends "index.html" %}
+{% extends "_index.html.twig" %}
 
 {% block title %}{{ title }}{% endblock %}
 
@@ -10,13 +10,13 @@
 {% endblock %}
 
 {% block content %}
-    {{include('header.html')}}
+    {{include('_header.html.twig')}}
         <div id="page_container">
             {% block page %}
 
             {% endblock %}
         </div>
-    {{include('footer.html')}}
+    {{include('_footer.html.twig')}}
 {% endblock %}
 
 

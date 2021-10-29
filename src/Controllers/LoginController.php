@@ -11,6 +11,7 @@ namespace APP\Blog\controllers;
             switch ($page){
                 case 'subscribe':
                     $this->subscribe();
+                    break;
             }
         }
 
