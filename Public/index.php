@@ -2,7 +2,7 @@
 require_once __DIR__.'/../Config/config.php';
 require_once __DIR__.'/../autoload.php';
 
-use APP\Blog\controllers\loginControler;
+use APP\Blog\controllers\loginController;
 
 if(isset($_SERVER['REQUEST_URI'])){
     $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2)[0];
@@ -12,7 +12,7 @@ if(isset($_SERVER['REQUEST_URI'])){
     if(isset($controler)){
         switch ($controler){
             case 'login':
-                $loginController = new loginControler($page);
+                $loginController = new loginController($page);
                 break;
         }
     }
