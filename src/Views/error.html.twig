@@ -1,0 +1,18 @@
+{% extends "main_template.html.twig" %}
+
+{% block page %}
+    <div class ="hero is-fullheight ">
+        <div class="hero-body">
+            <div  class="container is-centered columns has-text-centered">
+                <div id="error_container" class="column is-8 card has-background-danger-light">
+                    <h1 class="title">
+                        {{ error }}
+                    </h1>
+                    <p class="subtitle">
+                        {{ message }}
+                    </p>
+                    <button class="button"> <a href="http://blog_oc.fr"> <i class="fas fa-arrow-left mr-2"></i> revenir à la page d'acceuil</a></button>
+                </div>
+            </div>
+    </div>
+{% endblock %}
