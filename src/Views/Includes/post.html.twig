@@ -1,0 +1,22 @@
+
+<div class="column post is-12-tablet is-4-desktop" >
+    <article class="is-multiline">
+        <div class="container is-fluid">
+            <div class="image image_format_70 post-img">
+                <img src="{% if post.image %} {{ post.image }} {% else %}  https://cdn.emk.dev/templates/post-img.png {% endif %}" alt="Featured Image">
+            </div>
+            <div class="featured-content ">
+                <h1 class="title post-title">{{ post.title }}</h1>
+                <p id="header" class="post-excerpt">{{ post.header }}</p>
+                <br>
+                <div class="is-flex is-justify-content-space-between is-align-content-center">
+                    <div class="post_icone_container is-flex is-align-content-center">
+                        <p class="post_icone"> {{ post.nbComment}} <i class="fas fa-comment-alt"></i></p>
+                        <p class="post_icone"> {{ post.nbLike}} <i class="fas fa-heart"></i></p>
+                    </div>
+                    <a href="{{ URI }}/blog/detail/{{ post.id }}" class="button ">Read More</a>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>

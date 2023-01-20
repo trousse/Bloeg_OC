@@ -1,0 +1,41 @@
+{% extends "admin_main_template.html.twig" %}
+
+{% block page %}
+    <div class="container">
+        <div class="">
+            <div class=" is-full">
+                <h2> Comment </h2>
+                <div class="table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><abbr title="Position">user</abbr></th>
+                            <th><abbr title="Position">post title</abbr></th>
+                            <th><abbr title="Position">content</abbr></th>
+                            <th><abbr title="Position">date</abbr></th>
+                            <th><abbr title="Position">valided</abbr></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for comment in allComment %}
+                            <tr>
+                                <td>{{ comment.pseudo }}</td>
+                                <td>{{ comment.postTitle }}</td>
+                                <td>{{ comment.content }}</td>
+                                <td>{{ comment.date|date("d/m/Y") }}</td>
+                                <td>{% if comment.valided %}
+                                        <i class="fas fa-solid fa-check"></i>{% else %}
+                                        <i class="fas fa-solid fa-skull-crossbones"></i>
+                                    {% endif %}
+                                    <a href="{{ URI }}/admin/comment/switch/{{ comment.id }}"><i class=" fas fa-solid fa-repeat"></i></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

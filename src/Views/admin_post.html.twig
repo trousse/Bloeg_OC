@@ -1,0 +1,41 @@
+{% extends "admin_main_template.html.twig" %}
+
+{% block page %}
+    <div class="container">
+        <div class="">
+            <div class=" is-full">
+                <h2> Post </h2>
+                <div class="table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><abbr title="Position">title</abbr></th>
+                            <th><abbr title="Position">nbLike</abbr></th>
+                            <th><abbr title="Position">create at</abbr></th>
+                            <th><abbr title="Position">last edit</abbr></th>
+                            <th><abbr title="Position">actions</abbr></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for post in allPost %}
+                            <tr>
+                                <td>{{ post.title }}</td>
+                                <td>{{ post.nbLike }}</td>
+                                <td>{{ post.create_date|date("d/m/Y") }}</td>
+                                <td>{{ post.last_edit_date|date("d/m/Y") }}</td>
+                                <td>
+                                    <a href="{{ URI }}/blog/detail/{{ post.id }}"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ URI }}/blog/edit/{{ post.id }}"><i class="fas fa-edit"></i></a>
+                                    <a href="{{ URI }}/blog/delete/{{ post.id }}"><i class="fas fa-trash"></i></a>
+                                </td>
+                                <td></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "_index.html.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head %}
+    {{ parent() }}
+    {% for style in styles %}
+        <link rel="stylesheet" href="/Public/css/{{ style }}"/>
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+    {{include('_admin_header.html.twig')}}
+    <div id="page_container">
+        {% block page %}
+
+        {% endblock %}
+    </div>
+    {% for script in scripts %}
+        <script src="Public/js/{{ script }}"></script>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "admin_main_template.html.twig" %}
+
+{% block page %}
+    <div class="container">
+        <div class="">
+            <div class="is-full">
+                <h2> User </h2>
+                <div  class="table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th><abbr title="Position">pseudo</abbr></th>
+                            <th><abbr title="Position">email</abbr></th>
+                            <th><abbr title="Position">status</abbr></th>
+                            <th><abbr title="Position">last connection</abbr></th>
+                            <th><abbr title="Position">status</abbr></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for use in allUser %}
+                            <tr>
+                                <td>{{ use.pseudo }}</td>
+                                <td>{{ use.email }}</td>
+                                <td>{{ use.last_connection_date|date('d/m/Y') }}</td>
+                                <td>{{ use.sub_date|date('d/m/Y') }}</td>
+                                <td>{{ use.status }}{% if use.id != user.id %} <a href="{{ URI }}/admin/user/switch/{{ use.id }}"><i class=" fas fa-solid fa-repeat"></i></a> {% endif %}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

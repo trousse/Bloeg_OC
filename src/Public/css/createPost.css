@@ -1,0 +1,98 @@
+.navbar .navbar-item {
+    color: #e4e2ff;
+}
+
+.navbar .navbar-item.is-active {
+    color: #e4e2ff;
+    font-weight: 700;
+}
+
+.navbar .navbar-item:hover {
+    background: transparent;
+    color: white;
+}
+
+.navbar .navbar-item a {
+    margin-left: 1rem;
+    color: #e4e2ff;
+}
+
+.navbar{
+    background-color: #1f2c6c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container.is-fluid {
+    margin: 0;
+}
+
+.title_container{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.title_container > h2{
+    margin-top: 40px;
+    background-color: rgba(31, 44, 108, 0.65);
+    padding: 0 0.75rem;
+}
+
+.titles{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.required{
+    border-color: red !important;
+    border: 2px solid;
+}
+
+#post_form{
+    margin-top: 15px;
+}
+
+#message{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section.hero{
+    text-align: center;
+    padding: 0 5vw;
+    padding-top: 80px;
+    background-color: #7986cb;
+}
+
+#second_form_container{
+    min-height: 300px;
+    margin-bottom: 30px;
+}
+
+#post_content{
+    min-height: 300px;
+}
+
+#post_content_label{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#post_submit{
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box{
+    margin-bottom: 50px;
+}
+
+hr{
+    border-color: rgba(31, 44, 108, 0.65);
+}
+

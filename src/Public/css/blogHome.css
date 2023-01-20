@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Nunito+Sans:wght@400;600&display=swap');
+
+.container.is-fluid{
+    padding: 0;
+}
+
+.post_title_container{
+    width: 100%;
+    padding: 0 0.75rem;
+}
+
+
+h2{
+    margin-top: 40px;
+    background-color: rgba(31, 44, 108, 0.65);
+    padding: 0 0.75rem;
+}
+.post-one{
+    position: relative;
+}
+
+.read_more_post_one{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.post_one_icone_container{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+.columns{
+    margin: 0;
+}
+
+article{
+    background-color: white;
+    border-radius: 5px;
+}
+
+article > div{
+    background-color: white;
+    padding: 5px;
+}
+
+.post_icone{
+    margin-left: 5px;
+    font-size: 25px;
+    color: rgba(31, 44, 108, 0.65);
+}
+.is-multiline{
+    margin-top: 20px;
+}
+
+.titles{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.va {
+    display: flex;
+    align-items: center;
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+
+a {
+    color: #3b7adf;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #3b7adf;
+}
+
+hr {
+    background: #24272c;
+}
+
+.hero {
+    background: #060606;
+}
+
+
+.title,
+.subtitle {
+    color: white;
+}
+
+
+.blog-posts {
+    min-height: 100vh;
+    background: #7986cb;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+}
+
+.blog-posts article {
+    padding: 0.5rem;
+}
+
+.blog-posts .post img {
+    border-radius: 6px;
+}
+
+.blog-posts .post .post-category {
+    border-color: #3b7adf;
+}
+
+.blog-posts .post .post-title {
+    color: #424242;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.blog-posts .post .post-excerpt {
+    line-height: 1.5rem;
+    letter-spacing: .03rem;
+    font-size: 16px;
+    font-family: 'IBM Plex Serif', serif;
+    color: #424242;
+}
+
+.blog-posts .post .featured .featured-image img {
+    height: 380px;
+}
+
+#header{
+    min-height: 120px;
+}
+
+figure{
+    overflow: hidden;
+}
+
+figure > img{
+    height: inherit !important;
+}

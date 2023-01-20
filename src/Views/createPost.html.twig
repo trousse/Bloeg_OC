@@ -1,0 +1,75 @@
+{% extends "main_template.html.twig" %}
+
+{% block page %}
+    <section class="hero is-fullheight">
+        <div class="container is-fluid">
+            <div class="title_container is-fullwidth"><h2 class="has-text-centered titles is-fullwidth">{{ formFunction|upper }} POST</h2></div>
+            <div class="box is-fullwidth">
+                {% if message %}<span id="message" class="has-text-centered is-danger mb-3">{{ message }}</span>{% endif %}
+                <form id="post_form" method="post" action="{{ URI }}/blog/{{ formUrl }}">
+                    <div id="first_form_container" class="columns">
+                        <div class="column image_format_30 is-12-mobile is-6-desktop">
+                            <img class="is-fullwidth" src={% if image %} "{{ image }}" {% else %}   "https://cdn.emk.dev/templates/post-img.png" {% endif %} alt="illustration">
+                        </div>
+                        <div class="column is-12-mobile is-6-desktop">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label" for="image">Image</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input id="image" name="image" class="input is-hovered" type="text" placeholder="illustration post image"
+                                                    {% if image %} value="{{ image }}" {% endif %}>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label" for="title">Title *</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control">
+                                            <input id="title" name="title" class="input is-hovered {% if required.title %} required {% endif %}" type="text" placeholder="Title of post"
+                                                    {% if title %} value="{{ title }}" {% endif %}>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label"  for="header">Header *</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea id="header" name="header" class="textarea {% if required.header %} required {% endif %}" placeholder="Text to show on blog home page">{% if header %}{{ header }}{% endif %}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="second_form_container" class="container is-fluid">
+                        <div class="field is-vertical">
+                            <div id="post_content_label" class="field-label is-normal">
+                                <label class="label" for="post_content">Article *</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field {% if required.content %} required {% endif %}">
+                                    <p class="control">
+                                        <textarea id="post_content" name="post_content" class="textarea is-medium " placeholder="content of post">{% if content %}{{ content }}{% endif %}</textarea>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <input id="post_submit" class = "button" type="submit" value="{{ buttonValue }}">
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
