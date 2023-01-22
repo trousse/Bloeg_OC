@@ -11,7 +11,7 @@ class postModel extends model
     public function getPost($postId)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare("Select P.*,count(C.id) as nbComment FROM Post as P Left JOIN Comment as C on P.id = C.postId group by P.id having id = ?");
+        $req = $db->prepare("Select P.*,count((SELECT C.id WHERE C.Valided = true)) as nbComment FROM Post as P Left JOIN Comment as C on P.id = C.postId group by P.id having id = ?");
         $req->execute([$postId]);
         $result = $req->fetch(PDO::FETCH_ASSOC);
 
@@ -20,7 +20,7 @@ class postModel extends model
 
     public function getAllPost(){
         $db = $this->dbConnect();
-        $req = $db->prepare("Select P.*,count(C.id) as nbComment  FROM Post as P
+        $req = $db->prepare("Select P.*,count((SELECT C.id WHERE C.Valided = true)) as nbComment  FROM Post as P
         Left JOIN Comment as C on P.id = C.postId
         group by P.id");
         $req->execute();
