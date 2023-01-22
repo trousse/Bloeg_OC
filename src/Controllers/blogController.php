@@ -36,7 +36,7 @@ class BlogController extends Controller{
         $postModel = new postModel();
         $commentModel = new commentModel();
 
-        $this->data['post'] = $postModel->getPost($postId);
+        $this->data['post'] = $postModel-> getPost($postId);
         $this->data['comments'] = $commentModel->getComments($postId);
 
         foreach ($this->data['comments'] as $comment){

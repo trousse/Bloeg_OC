@@ -118,12 +118,16 @@ hr {
     color: #424242;
     font-size: 2rem;
     margin-bottom: 10px;
+    height: 70px;
+    overflow: scroll;
 }
 
 .blog-posts .post .post-excerpt {
     line-height: 1.5rem;
     letter-spacing: .03rem;
     font-size: 16px;
+    height: 100px;
+    overflow: scroll;
     font-family: 'IBM Plex Serif', serif;
     color: #424242;
 }
